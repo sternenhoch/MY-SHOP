@@ -12,18 +12,18 @@
 
 <body class="text-center">
     <form class="form-signin">
-  <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-  <h1 class="h3 mb-3 font-weight-normal">Join our community</h1>
-
+  <h1 class="h3 mb-3 font-weight-normal">Create your account</h1>
+  <label for="inputLogin">Login</label>
+    <input type="text" class="form-control" id="inputLogin" placeholder="Enter your login">
   <label for="inputEmail" class="sr-only">Email address</label>
-  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+  <input type="email" id="inputEmail" class="form-control" placeholder="Enter your email" required="" autofocus="">
   <label for="inputPassword" class="sr-only">Password</label>
   <input type="password" id="inputPassword" class="form-control" placeholder="Enter your password" required="">
   <label for="inputPassword" class="sr-only">Password confirmation</label>
   <input type="password" id="inputPassword" class="form-control" placeholder="Confirm your password" required="">
   <div class="checkbox mb-3">
   </div>
-  <button class="btn btn-lg btn-primary btn-dark" type="submit">Sign in</button>
+  <button class="btn btn-lg btn-primary btn-dark" type="submit">Register</button>
 </form>
 
 
