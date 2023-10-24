@@ -10,22 +10,41 @@
     <title>Create your account</title>
 </head>
 
-<body class="text-center">
-    <form class="form-signin">
-  <h1 class="h3 mb-3 font-weight-normal">Create your account</h1>
-  <label for="inputLogin">Login</label>
-    <input type="text" class="form-control" id="inputLogin" placeholder="Enter your login">
-  <label for="inputEmail" class="sr-only">Email address</label>
-  <input type="email" id="inputEmail" class="form-control" placeholder="Enter your email" required="" autofocus="">
-  <label for="inputPassword" class="sr-only">Password</label>
-  <input type="password" id="inputPassword" class="form-control" placeholder="Enter your password" required="">
-  <label for="inputPassword" class="sr-only">Password confirmation</label>
-  <input type="password" id="inputPassword" class="form-control" placeholder="Confirm your password" required="">
-  <div class="checkbox mb-3">
-  </div>
-  <button class="btn btn-lg btn-primary btn-dark" type="submit">Register</button>
-</form>
+<body>
+<form class="form-signin">
+    <h1 class="h3 mb-3 col-sm-6 font-weight-normal text-center">Create your account</h1>
+    <div class="form-group row mb-3">
+      <label for="inputLogin" class="col-sm-1 col-form-label">Login</label>
+      <div class="col-sm-6">
+      <input type="text" class="form-control" id="inputLogin" placeholder="Enter your login">
+      </div>
+    </div>
 
+    <div class="form-group row mb-3">
+    <label for="inputEmail" class="col-sm-1 col-form-label">Email</label>
+      <div class="col-sm-6">
+        <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email" required="">
+      </div>
+    </div>
+
+  <div class="form-group row mb-3">
+    <label for="inputPassword" class="col-sm-1 col-form-label">Password</label>
+    <div class="col-sm-6">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password" required="">
+    </div>
+  </div>
+
+  <div class="form-group row mb-3">
+    <label for="inputPasswordConfirm" class="col-sm-1 col-form-label">Password Confirmation</label>
+    <div class="col-sm-6">
+      <input type="password" class="form-control" id="inputPasswordConfirm" placeholder="Confirm your password" required="">
+    </div>
+  </div>
+
+    <div class="col-sm-6">
+      <button type="submit" class="btn btn-dark">Register</button>
+    </div>
+</form>
 
 <!--including basic Bootstrap scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
