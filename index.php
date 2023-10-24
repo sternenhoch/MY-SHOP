@@ -46,7 +46,40 @@
     <!--row1-->
     <div class="row justify-content-between">
           <!-- 1er carré avec les filtres -->
-            <div class="col-md-5 col-xl-3 bg-info">1er carré avec les filtres</div>
+            <div class="col-md-5 col-xl-3 bg-info"><article class="contenu1">
+    <figure class="containerFilterBy">
+        <blockquote lang="en">
+        <p class="para">FILTER BY</p1>
+        </blockquote>  
+        <div class="containerMenu">
+            <p class="Menu">Collection</p>
+            <svg xmlns="./images/list.svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+        </div>
+        
+        <div class="containerMenu">
+            <p class="Menu">Catégories</p>
+            <svg xmlns="./images/list.svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+        </div>
+        <div class="containerMenu">
+            <p class="Menu">BPM</p>
+            <svg xmlns="./images/list.svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+        </div>
+        <div class="containerRange">
+            <p>Prix</p>
+            <input type="range" id="price" min="0" max="150" step="1" value="0">
+            <article class="nbr">
+                <p class="chiffre">0€</p>
+                <p class="chiffre2">150€</p2>
+            </article>
+        </div>
+    </figure>
+  </div>
             <!-- les carrés avec les images -->
             <!--carré 1 -->
             <div class="col-md-5 col-xl-3">
