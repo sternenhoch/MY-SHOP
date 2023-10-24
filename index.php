@@ -40,37 +40,6 @@
   </div>
 </nav>
 
-  <!-- 
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#expandme">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse d-flex justify-content-between" id="expandme">
-        <ul class="navbar-nav">
-          <li>
-            <a class="navbar-brand" href="#">MM Shop</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Shop</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
-        </ul>
-
-    <form role="search">
-    <a class="btn btn-dark" href="./signup.php" role="button">Create your account</a>
-    <a class="btn btn-dark" href="./signin.php" role="button">Sign In</a>
-      <input class="mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>-->
-
 <main role="main" class="container">
 
   
