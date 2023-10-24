@@ -43,17 +43,18 @@
 
 <!-- main flexbox-->
   <div class="container-fluid">
-    
-        <div class="row justify-content-between">
+    <!--row1-->
+    <div class="row justify-content-between">
           <!-- 1er carré avec les filtres -->
             <div class="col-md-5 col-xl-3 bg-info">1er carré avec les filtres</div>
             <!-- les carrés avec les images -->
-            <div class="col-md-5 col-xl-3 bg-info border border-primary">
-              <img class="product-image" src="" alt=""></div>
+            <!--carré 1 -->
+            <div class="col-md-5 col-xl-3">
+              <img class="product-imag img-fluid" src="./images/basilic_pot.jpg" alt="">
               <div class="product-info">  
-                    <h4 class="product-name">Product name</h4>
-                    <span class="price">€ price</span>
-                    <p class="category">category</p>
+                    <h4 class="product-name">Basilic plant</h4>
+                    <span class="price">€9.99</span>
+                    <p class="category">aromatic plant</p>
                     <i class=" cart fa fa-cart-arrow-down" aria-hidden="true"></i>
                 </div>
                 <div class="rating">
@@ -63,23 +64,158 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star-half-o checked" aria-hidden="true"></span>
                 </div>
-            <div class="col-md-5 col-xl-3 bg-info border">center </div>
-            <div class="col-md-5 col-xl-3 bg-info border">This is the right side</div>
+              </div>
+                <!--carré 2 -->
+            <div class="col-md-5 col-xl-3">
+            <img class="product-image img-fluid" src="./images/blooming_cactus.jpg" alt="">
+              <div class="product-info">  
+                    <h4 class="product-name">Blooming cactus</h4>
+                    <span class="price">€19.99</span>
+                    <p class="category">succulent</p>
+                    <i class=" cart fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star" aria-hidden="true"></span>
+                </div>
+            </div>
+            <!--carré 3 -->
+            <div class="col-md-5 col-xl-3 bg-info border">
+            <img class="product-image img-fluid" src="./images/bonsai_tree.jpg" alt="">
+              <div class="product-info">  
+                    <h4 class="product-name">Bonsai tree</h4>
+                    <span class="price">€39.99</span>
+                    <p class="category">bonsai</p>
+                    <i class=" cart fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+              </div>
+           
+              
+
             </div>
         
-        <div class="row justify-content-between border">
-            <div class="col-md-5 col-xl-3 bg-info border">This is the left side</div>
-            <div class="col-md-5 col-xl-3 bg-info border">center </div>
-            <div class="col-md-5 col-xl-3 bg-info border">center </div>
-            <div class="col-md-5 col-xl-3 bg-info border">This is the right side</div>
+<!-- row2 -->
+<div class="row justify-content-between">
+              <!--carré 1 -->
+<div class="col-md-5 col-xl-3">
+              <img class="product-imag img-fluid" src="./images/daisy_pot.jpg" alt="">
+              <div class="product-info">  
+                    <h4 class="product-name">Daisy</h4>
+                    <span class="price">€8.99</span>
+                    <p class="category">flower</p>
+                    <i class=" cart fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+              </div>
+            <!--carré 2 -->
+            <div class="col-md-5 col-xl-3">
+              <img class="product-imag img-fluid" src="./images/lemon_tree.jpg" alt="">
+              <div class="product-info">  
+                    <h4 class="product-name">Lemon tree</h4>
+                    <span class="price">€49.99</span>
+                    <p class="category">tree</p>
+                    <i class=" cart fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half-o checked" aria-hidden="true"></span>
+                </div>
+              </div>
+                <!--carré 3 -->
+            <div class="col-md-5 col-xl-3">
+            <img class="product-image img-fluid" src="./images/plant1_pot.jpg" alt="">
+              <div class="product-info">  
+                    <h4 class="product-name">Plant1</h4>
+                    <span class="price">€12.50</span>
+                    <p class="category">succulent</p>
+                    <i class=" cart fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star" aria-hidden="true"></span>
+                </div>
             </div>
+            <!--carré 4 -->
+            <div class="col-md-5 col-xl-3 bg-info border">
+            <img class="product-image img-fluid" src="./images/plant2_pot.jpg" alt="">
+              <div class="product-info">  
+                    <h4 class="product-name">Plant2</h4>
+                    <span class="price">€39.99</span>
+                    <p class="category">interior plant</p>
+                    <i class=" cart fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+              </div>
+        </div>
 
-        <div class="row justify-content-between border">
-            <div class="col-md-5 col-xl-3 bg-info border">This is the left side</div>
-            <div class="col-md-5 col-xl-3 bg-info border">center </div>
-            <div class="col-md-5 col-xl-3 bg-info border">center </div>
-            <div class="col-md-5 col-xl-3 bg-info border">This is the right side</div>
-            </div>
+        
+        <!-- row3 -->
+<div class="row justify-content-between">
+              <!--carré 1 -->
+<div class="col-md-5 col-xl-3">
+              <img class="product-imag img-fluid" src="./images/rose.jpg" alt="">
+              <div class="product-info">  
+                    <h4 class="product-name">Rose</h4>
+                    <span class="price">€8.99</span>
+                    <p class="category">flower</p>
+                    <i class=" cart fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+              </div>
+            <!--carré 2 -->
+            <div class="col-md-5 col-xl-3">
+              <img class="product-imag img-fluid" src="./images/tomato_veggie.jpg" alt="">
+              <div class="product-info">  
+                    <h4 class="product-name">Tomato</h4>
+                    <span class="price">€15.70</span>
+                    <p class="category">vegetable</p>
+                    <i class=" cart fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half-o checked" aria-hidden="true"></span>
+                </div>
+              </div>
+        </div>
+
+
         </div>
   </div>
 
