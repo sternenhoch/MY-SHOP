@@ -32,47 +32,41 @@
       </ul>
       <a class="btn btn-dark" href="./signup.php" role="button">Create your account</a>
       <a class="btn btn-dark" href="./signin.php" role="button">Sign In</a>
-      <form class="d-flex" role="search">
+    </div>
+  </div>
+  <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-secondary" type="submit">Search</button>
       </form>
-    </div>
-  </div>
 </nav>
 
-<main role="main" class="container">
-
-  <div class="starter-template">
-    <h1>Bootstrap starter template</h1>
-  </div>
+<!-- main flexbox-->
   <div class="container-fluid">
     
-     <p>Random para</p>
-        <div class="row">    
-            <div class="col-md-4 content1-left">This is the left side</div>
-            <div class="col-md-4 content1-center">center </div>
-            <div class="col-md-4 content1-right">This is the right side</div>
+        <div class="row justify-content-between border">
+            <div class="col-md-5 col-xl-3 bg-info border">This is the left side</div>
+            <div class="col-md-5 col-xl-3 bg-info border">center </div>
+            <div class="col-md-5 col-xl-3 bg-info border">center </div>
+            <div class="col-md-5 col-xl-3 bg-info border">This is the right side</div>
+            </div>
+        
+        <div class="row justify-content-between border">
+            <div class="col-md-5 col-xl-3 bg-info border">This is the left side</div>
+            <div class="col-md-5 col-xl-3 bg-info border">center </div>
+            <div class="col-md-5 col-xl-3 bg-info border">center </div>
+            <div class="col-md-5 col-xl-3 bg-info border">This is the right side</div>
+            </div>
+
+        <div class="row justify-content-between border">
+            <div class="col-md-5 col-xl-3 bg-info border">This is the left side</div>
+            <div class="col-md-5 col-xl-3 bg-info border">center </div>
+            <div class="col-md-5 col-xl-3 bg-info border">center </div>
+            <div class="col-md-5 col-xl-3 bg-info border">This is the right side</div>
             </div>
         </div>
-    
-    <div class="container-fluid">
-    <p>Random para</p>
-    <div class="row">    
-        <div class="col-md-4 content2-left">This is the left side</div>
-        <div class="col-md-4 content2-center"></div>
-        <div class="col-md-4 content2-right">This is the right side</div>
-        </div>
-    </div>
+  </div>
 
-    <div class="container-fluid">
-    <p>Random para</p>
-        <div class="row">    
-            <div class="col-md-4 content3-left">This is the left side</div>
-            <div class="col-md-4 content3-center">center </div>
-            <div class="col-md-4 content3-right">This is the right side</div>
-            </div>
-        </div>
-
+        <!--pagination-->
         <nav aria-label="Page navigation example">
             <ul class="pagination">
               <li class="page-item"><a class="page-link" href="#">Previous</a></li>
@@ -82,20 +76,9 @@
               <li class="page-item"><a class="page-link" href="#">Next</a></li>
             </ul>
           </nav>
-
   
 
       <!--including basic Bootstrap scripts -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-      <nav aria-label="Page navigation example">
-            <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-          </nav>
 </body>
 </html>
