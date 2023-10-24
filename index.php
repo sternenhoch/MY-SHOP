@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="my_shop_style.css">
     <title>Melinda & Maryna Shop</title>
 </head>
@@ -43,9 +44,25 @@
 <!-- main flexbox-->
   <div class="container-fluid">
     
-        <div class="row justify-content-between border">
-            <div class="col-md-5 col-xl-3 bg-info border">This is the left side</div>
-            <div class="col-md-5 col-xl-3 bg-info border">center </div>
+        <div class="row justify-content-between">
+          <!-- 1er carré avec les filtres -->
+            <div class="col-md-5 col-xl-3 bg-info">1er carré avec les filtres</div>
+            <!-- les carrés avec les images -->
+            <div class="col-md-5 col-xl-3 bg-info border border-primary">
+              <img class="product-image" src="" alt=""></div>
+              <div class="product-info">  
+                    <h4 class="product-name">Product name</h4>
+                    <span class="price">€ price</span>
+                    <p class="category">category</p>
+                    <i class=" cart fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half-o checked" aria-hidden="true"></span>
+                </div>
             <div class="col-md-5 col-xl-3 bg-info border">center </div>
             <div class="col-md-5 col-xl-3 bg-info border">This is the right side</div>
             </div>
