@@ -20,8 +20,12 @@
 
 }
 
-/*.product-image {
-    height: auto;
+.row {
+    height: 33%;
+}
+
+.product-image {
+    max-height: 33%;
     width: 100%;
     object-fit: cover;
 }*/
