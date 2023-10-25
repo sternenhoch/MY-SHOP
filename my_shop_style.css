@@ -1,7 +1,7 @@
 .containerMenu svg{
     width: 20px;
     height: 20px;
-   
+
 }
 
 .containerRange{
@@ -18,4 +18,36 @@
     border-bottom: 1px solid rgba(1, 33, 54, 0.285);
     margin-top: 10px;
 
+}
+
+.row {
+    height: 33%;
+}
+
+.product-image {
+    max-height: 33%;
+    width: 100%;
+    object-fit: cover;
+}*/
+
+.checked {
+    color: orange;
+  }
+
+  i {
+    float: right;
+}
+
+.price {
+    font-size: 1rem;
+    float: right;
+}
+
+.category {
+    font-size: 0.75rem;
+    opacity: 0.5;
+}
+
+h4 {
+    font-size: 1.25rem;
 }

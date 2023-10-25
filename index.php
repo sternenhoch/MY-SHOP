@@ -13,7 +13,7 @@
 
 <body>
   <!-- navbar -->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">MM Shop</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#expandme" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,7 +83,7 @@
             <!-- les carrés avec les images -->
             <!--carré 1 -->
             <div class="col-md-5 col-xl-3">
-              <img class="product-imag img-fluid" src="./images/basilic_pot.jpg" alt="">
+              <img class="product-image img-fluid" src="./images/basilic_pot.jpg" alt="">
               <div class="product-info">  
                     <h4 class="product-name">Basilic plant</h4>
                     <span class="price">€9.99</span>
@@ -116,7 +116,7 @@
                 </div>
             </div>
             <!--carré 3 -->
-            <div class="col-md-5 col-xl-3 bg-info border">
+            <div class="col-md-5 col-xl-3 bg-info">
             <img class="product-image img-fluid" src="./images/bonsai_tree.jpg" alt="">
               <div class="product-info">  
                     <h4 class="product-name">Bonsai tree</h4>
@@ -141,7 +141,7 @@
 <div class="row justify-content-between">
               <!--carré 1 -->
 <div class="col-md-5 col-xl-3">
-              <img class="product-imag img-fluid" src="./images/daisy_pot.jpg" alt="">
+              <img class="product-image img-fluid" src="./images/daisy_pot.jpg" alt="">
               <div class="product-info">  
                     <h4 class="product-name">Daisy</h4>
                     <span class="price">€8.99</span>
@@ -158,7 +158,7 @@
               </div>
             <!--carré 2 -->
             <div class="col-md-5 col-xl-3">
-              <img class="product-imag img-fluid" src="./images/lemon_tree.jpg" alt="">
+              <img class="product-image img-fluid" src="./images/lemon_tree.jpg" alt="">
               <div class="product-info">  
                     <h4 class="product-name">Lemon tree</h4>
                     <span class="price">€49.99</span>
@@ -214,7 +214,7 @@
 <div class="row justify-content-between">
               <!--carré 1 -->
 <div class="col-md-5 col-xl-3">
-              <img class="product-imag img-fluid" src="./images/rose.jpg" alt="">
+              <img class="product-image img-fluid" src="./images/rose.jpg" alt="">
               <div class="product-info">  
                     <h4 class="product-name">Rose</h4>
                     <span class="price">€8.99</span>
@@ -231,7 +231,7 @@
               </div>
             <!--carré 2 -->
             <div class="col-md-5 col-xl-3">
-              <img class="product-imag img-fluid" src="./images/tomato_veggie.jpg" alt="">
+              <img class="product-image img-fluid" src="./images/tomato_veggie.jpg" alt="">
               <div class="product-info">  
                     <h4 class="product-name">Tomato</h4>
                     <span class="price">€15.70</span>
