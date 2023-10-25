@@ -1,4 +1,6 @@
 <?php
+include "connect_db.php";
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       function my_password_hash($password){
         $salt = uniqid();
@@ -18,6 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       echo "Password and password confirmation do not match" . PHP_EOL;
       return false;
     }
+
+    //1. NEED TO CHECK IF THE USER ALREADY EXISTS IN A DB: make sure that email does not exist in DB
+    //2. If the user doesn't exist, INSERT INTO users to save user data
+
     return array(
       "username" => $_POST['login'],
       "email" => $_POST['email'],
@@ -25,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     );
   }
   $data = get_data();
-  var_dump($data);
   if ($data!==false){
     echo "User created";
   }
