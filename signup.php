@@ -3,8 +3,7 @@ include "connect_db.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       function my_password_hash($password){
-        $salt = uniqid();
-        $hash = crypt($password, $salt);
+        $hash = password_hash($password, PASSWORD_BCRYPT);
         return $hash;
     }
 
