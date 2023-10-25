@@ -1,0 +1,49 @@
+.containerMenu svg{
+    width: 20px;
+    height: 20px;
+
+}
+
+.containerRange{
+    margin-top: 10px;
+}
+
+.containerMenu {
+    width: 250px;
+    height: 50px;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(1, 33, 54, 0.285);
+    margin-top: 10px;
+
+}
+
+/*.product-image {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}*/
+
+.checked {
+    color: orange;
+  }
+
+  i {
+    float: right;
+}
+
+.price {
+    font-size: 1rem;
+    float: right;
+}
+
+.category {
+    font-size: 0.75rem;
+    opacity: 0.5;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
