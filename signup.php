@@ -2,24 +2,25 @@
 include "connect_db.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-      function my_password_hash($password){
-        $hash = password_hash($password, PASSWORD_BCRYPT);
-        return $hash;
-    }
-
-  function get_data() {
-    $data = array();
+  function my_password_hash($password)
+  {
+    $hash = password_hash($password, PASSWORD_BCRYPT);
+    return $hash;
+  }
+  //data check and validation
+  function get_data()
+  {
     if (!preg_match("/^[a-zA-Z-' ]*$/", $_POST["login"])) {
-      echo "Invalid login" . "\n";
+      echo "Invalid login" . "<br>";
       return false;
     } elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-      echo "Invalid email format" . PHP_EOL;
+      echo "Invalid email format" . "<br>";
       return false;
     } elseif ($_POST["password"] !== $_POST["password_confirmation"]) {
-      echo "Password and password confirmation do not match" . PHP_EOL;
+      echo "Password and password confirmation do not match" . "<br>";
       return false;
     }
-
+    //if the check ok, save user data from the form
     return array(
       "username" => $_POST['login'],
       "email" => $_POST['email'],
@@ -27,18 +28,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     );
   }
 
-   //1. NEED TO CHECK IF THE USER ALREADY EXISTS IN A DB: make sure that email does not exist in DB
-   /*$statement = $pdo->prepare("SELECT email FROM users WHERE email = :email");
-   $statement-> execute (['email'] => $email);
-   $user = $statement->fetch();
-   if(isset($user) && !empty($user)){
-    echo "User with such email already exists."."\n";
-   }*/
-   //2. If the user doesn't exist, INSERT INTO users to save user data
+  $pdo = connect_db("127.0.0.1", "mm", "mm", "3306", "my_shop");
 
   $data = get_data();
-  if ($data!==false){
-    echo "User created";
+
+   //CHECK IF THE USER email ALREADY EXISTS IN A DB
+  if ($data !== false) {
+    $ma_requete = "SELECT email FROM users WHERE email LIKE '" . $data['email'] . "' AND password LIKE '" . $data['password'] . "'";
+   $mon_pdo_statement = $pdo->query($ma_requete);
+    //var_dump($mon_pdo_statement);
+    $result = $mon_pdo_statement->fetchAll(PDO::FETCH_ASSOC);
+    // var_dump("A ETE TROUVER => ",  $result);
+    /*$sth = $pdo->prepare($ma_requete);
+    $sth->execute();
+    $result = $sth->fetchAll(PDO::FETCH_COLUMN, 0);
+    var_dump("RESULT => ",  $result);
+    return;*/
+    if (isset($result) && !empty($result)) {
+      echo "User with such email already exists." . "<br>";
+    } else {
+ //     var_dump("DATA => ", $data);
+    //If the user doesn't exist, INSERT INTO users to save user data
+    $statement = $pdo->prepare("INSERT INTO users (username, password, email, admin) VALUES (:username, :password, :email, 0)");
+    $statement->bindParam(":username", $data['username']);
+    $statement->bindParam(":password", $data['password']);
+    $statement->bindParam(":email", $data['email']);
+    //var_dump($statement);
+    $result = $statement->execute();
+    echo "User " . $data['username'] . " created" . "<br>";
+  }
   }
 }
 ?>
