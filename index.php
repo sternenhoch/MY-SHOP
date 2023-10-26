@@ -46,7 +46,7 @@
     <!--row1-->
     <div class="row justify-content-between">
           <!-- 1er carré avec les filtres -->
-            <div class="col-md-5 col-xl-3 bg-info"><article class="contenu1">
+            <div class="col-md-5 col-xl-3"><article class="contenu1">
     <figure class="containerFilterBy">
         <blockquote lang="en">
         <p class="para">FILTER BY</p1>
@@ -116,7 +116,7 @@
                 </div>
             </div>
             <!--carré 3 -->
-            <div class="col-md-5 col-xl-3 bg-info">
+            <div class="col-md-5 col-xl-3">
             <img class="product-image img-fluid" src="./images/bonsai_tree.jpg" alt="Potted Bonsaï plant">
               <div class="product-info">  
                     <h4 class="product-name">Bonsai tree</h4>
@@ -191,7 +191,7 @@
                 </div>
             </div>
             <!--carré 4 -->
-            <div class="col-md-5 col-xl-3 bg-info border">
+            <div class="col-md-5 col-xl-3">
             <img class="product-image img-fluid" src="./images/plant2_pot.jpg" alt="Purple tute syngonium pixie, interior plant">
               <div class="product-info">  
                     <h4 class="product-name">Plant2</h4>
