@@ -1,5 +1,13 @@
 <?php
+/*include "connect_db.php";
 
+$pdo = connect_db("127.0.0.1", "mm", "mm", "3306", "my_shop");
+  if (!isset($_POST['email'], $_POST['password'])){
+    exit('Please fill both email and password fields.');
+  }
+  $ma_requete = "SELECT email FROM users WHERE email = $_POST['email'] AND WHERE password = $_POST['password']";
+  $mon_pdo_statement = $pdo->query($ma_requete);
+  $result = $pdo->fetchAll();*/
 ?>
 
 <!DOCTYPE html>

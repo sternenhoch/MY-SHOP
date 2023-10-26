@@ -20,15 +20,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       return false;
     }
 
-    //1. NEED TO CHECK IF THE USER ALREADY EXISTS IN A DB: make sure that email does not exist in DB
-    //2. If the user doesn't exist, INSERT INTO users to save user data
-
     return array(
       "username" => $_POST['login'],
       "email" => $_POST['email'],
       "password" => my_password_hash($_POST['password'])
     );
   }
+
+   //1. NEED TO CHECK IF THE USER ALREADY EXISTS IN A DB: make sure that email does not exist in DB
+   /*$statement = $pdo->prepare("SELECT email FROM users WHERE email = :email");
+   $statement-> execute (['email'] => $email);
+   $user = $statement->fetch();
+   if(isset($user) && !empty($user)){
+    echo "User with such email already exists."."\n";
+   }*/
+   //2. If the user doesn't exist, INSERT INTO users to save user data
+
   $data = get_data();
   if ($data!==false){
     echo "User created";
