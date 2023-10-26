@@ -13,8 +13,8 @@
 <body>
 <div class="container pt-5">
     <div class="row justify-content-around">
-        <a class="btn mt-5 col-md-4 btn-lg btn-dark" href="" role="button">Manage users</a>
-        <a class="btn mt-5 col-md-4 btn-lg btn-dark" href="" role="button">Manage products</a>
+        <a class="btn mt-5 col-md-4 btn-lg btn-dark" href="./admin/users.php" role="button">Manage users</a>
+        <a class="btn mt-5 col-md-4 btn-lg btn-dark" href="./admin/products.php" role="button">Manage products</a>
     </div>
 </div>
 
