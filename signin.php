@@ -36,10 +36,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   //$ma_requete = "SELECT password FROM users WHERE email LIKE '" . $data['email'] . "' AND password LIKE '" . $data['password'] . "'";
     $mon_pdo_statement = $pdo->query($ma_requete);
     //var_dump("The query is => ",  $mon_pdo_statement);
-    $result = $mon_pdo_statement->fetchAll(PDO::FETCH_COLUMN);
+    $result = $mon_pdo_statement->fetchAll(PDO::FETCH_ASSOC);
     var_dump("The recorded hash is => ",  $result);
     var_dump("The password entered by user is => ", $data['password']);
+    echo "Trying to extract =>" . $hash = $result['password'];// try to extract the needed part
     if (password_verify($data['password'], $result)){
+      //now need to redirect to index.php if admin =0 and to admin.php if admin = 1
       echo "Hoooray, password is valid!";
       header("Location: index.php");//check the syntax: this or ./index.php?
     } else {
@@ -47,15 +49,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
   }
 }
-      /*if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-      echo "Invalid email format" . "<br>";
-      var_dump($_POST["email"]);
-      return false;*/
-/*elseif ($_POST["password"] !== 
-  }
-  /*$ma_requete = "SELECT email FROM users WHERE email = $_POST['email'] AND WHERE password = $_POST['password']";
-  $mon_pdo_statement = $pdo->query($ma_requete);
-  $result = $pdo->fetchAll();*/
+
+      //check if admin or not
+      $admin_requete = "SELECT admin FROM users WHERE email LIKE '" . $data['email'] . "'";
+      $mon_pdo_statement = $pdo->query($admin_requete);
+      $admin_result = $mon_pdo_statement->fetchAll(PDO::FETCH_ASSOC);
+      var_dump($admin_result);
+      if ($admin_result = 0) {
+        header("Location: index.php");//check the syntax: this or ./index.php?
+      } else {
+        header("Location: admin.php");//check the syntax: this or ./admin.php?
+      }
 ?>
 
 <!DOCTYPE html>
