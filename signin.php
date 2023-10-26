@@ -20,24 +20,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $pdo = connect_db("127.0.0.1", "mm", "mm", "3306", "my_shop");
 
   $data = get_data();
-  //convert entered password to a hash
-  $data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);
+  /*convert entered password to a hash
+  $data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);*/
 /*function my_password_hash($password)
   {
     $hash = password_hash($data['password'], PASSWORD_BCRYPT);
     return $hash;
   }*/
-  var_dump($data);
+  //var_dump($data);
 
   //check that entered password matches a DB entry for a corresponding email
+
   if ($data !== false) {
-    $ma_requete = "SELECT email, password FROM users WHERE email LIKE '" . $data['email'] . "' AND password LIKE '" . $data['password'] . "'";
+    $ma_requete = "SELECT password FROM users WHERE email LIKE '" . $data['email'] . "'";
+  //$ma_requete = "SELECT password FROM users WHERE email LIKE '" . $data['email'] . "' AND password LIKE '" . $data['password'] . "'";
     $mon_pdo_statement = $pdo->query($ma_requete);
-    var_dump($mon_pdo_statement);
+    //var_dump("The query is => ",  $mon_pdo_statement);
+    $result = $mon_pdo_statement->fetchAll(PDO::FETCH_COLUMN);
+    var_dump("The recorded hash is => ",  $result);
+    var_dump("The password entered by user is => ", $data['password']);
+    if (password_verify($data['password'], $result)){
+      echo "Hoooray, password is valid!";
+      header("Location: index.php");//check the syntax: this or ./index.php?
+    } else {
+      echo "Please, check your password";
+    }
   }
 }
-
-
       /*if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
       echo "Invalid email format" . "<br>";
       var_dump($_POST["email"]);
