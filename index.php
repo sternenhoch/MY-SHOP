@@ -83,7 +83,7 @@
             <!-- les carrés avec les images -->
             <!--carré 1 -->
             <div class="col-md-5 col-xl-3">
-              <img class="product-image img-fluid" src="./images/basilic_pot.jpg" alt="">
+              <img class="product-image img-fluid" src="./images/basilic_pot.jpg" alt="Potted basil plant">
               <div class="product-info">  
                     <h4 class="product-name">Basilic plant</h4>
                     <span class="price">€9.99</span>
@@ -100,7 +100,7 @@
               </div>
                 <!--carré 2 -->
             <div class="col-md-5 col-xl-3">
-            <img class="product-image img-fluid" src="./images/blooming_cactus.jpg" alt="">
+            <img class="product-image img-fluid" src="./images/blooming_cactus.jpg" alt="Potted cactus plant">
               <div class="product-info">  
                     <h4 class="product-name">Blooming cactus</h4>
                     <span class="price">€19.99</span>
@@ -117,7 +117,7 @@
             </div>
             <!--carré 3 -->
             <div class="col-md-5 col-xl-3 bg-info">
-            <img class="product-image img-fluid" src="./images/bonsai_tree.jpg" alt="">
+            <img class="product-image img-fluid" src="./images/bonsai_tree.jpg" alt="Potted Bonsaï plant">
               <div class="product-info">  
                     <h4 class="product-name">Bonsai tree</h4>
                     <span class="price">€39.99</span>
@@ -141,7 +141,7 @@
 <div class="row justify-content-between">
               <!--carré 1 -->
 <div class="col-md-5 col-xl-3">
-              <img class="product-image img-fluid" src="./images/daisy_pot.jpg" alt="">
+              <img class="product-image img-fluid" src="./images/daisy_pot.jpg" alt="Potted Daisy plant">
               <div class="product-info">  
                     <h4 class="product-name">Daisy</h4>
                     <span class="price">€8.99</span>
@@ -158,7 +158,7 @@
               </div>
             <!--carré 2 -->
             <div class="col-md-5 col-xl-3">
-              <img class="product-image img-fluid" src="./images/lemon_tree.jpg" alt="">
+              <img class="product-image img-fluid" src="./images/lemon_tree.jpg" alt="Potted lemon tree plant">
               <div class="product-info">  
                     <h4 class="product-name">Lemon tree</h4>
                     <span class="price">€49.99</span>
@@ -175,7 +175,7 @@
               </div>
                 <!--carré 3 -->
             <div class="col-md-5 col-xl-3">
-            <img class="product-image img-fluid" src="./images/plant1_pot.jpg" alt="">
+            <img class="product-image img-fluid" src="./images/plant1_pot.jpg" alt="Potted Haworthia plant">
               <div class="product-info">  
                     <h4 class="product-name">Plant1</h4>
                     <span class="price">€12.50</span>
@@ -192,7 +192,7 @@
             </div>
             <!--carré 4 -->
             <div class="col-md-5 col-xl-3 bg-info border">
-            <img class="product-image img-fluid" src="./images/plant2_pot.jpg" alt="">
+            <img class="product-image img-fluid" src="./images/plant2_pot.jpg" alt="Purple tute syngonium pixie, interior plant">
               <div class="product-info">  
                     <h4 class="product-name">Plant2</h4>
                     <span class="price">€39.99</span>
@@ -214,7 +214,7 @@
 <div class="row justify-content-between">
               <!--carré 1 -->
 <div class="col-md-5 col-xl-3">
-              <img class="product-image img-fluid" src="./images/rose.jpg" alt="">
+              <img class="product-image img-fluid" src="./images/rose.jpg" alt="Potted red rose plant">
               <div class="product-info">  
                     <h4 class="product-name">Rose</h4>
                     <span class="price">€8.99</span>
@@ -231,7 +231,7 @@
               </div>
             <!--carré 2 -->
             <div class="col-md-5 col-xl-3">
-              <img class="product-image img-fluid" src="./images/tomato_veggie.jpg" alt="">
+              <img class="product-image img-fluid" src="./images/tomato_veggie.jpg" alt="Potted tomato plant">
               <div class="product-info">  
                     <h4 class="product-name">Tomato</h4>
                     <span class="price">€15.70</span>
