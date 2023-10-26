@@ -1,11 +1,50 @@
 <?php
-/*include "connect_db.php";
+include "connect_db.php";
 
-$pdo = connect_db("127.0.0.1", "mm", "mm", "3306", "my_shop");
-  if (!isset($_POST['email'], $_POST['password'])){
-    exit('Please fill both email and password fields.');
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+ function get_data(){
+    if (!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i", $_POST['email'])) {
+      echo "Invalid email format" . "<br>";
+      return false;
+    } elseif (!preg_match_all('$\S*(?=\S{5,})\S*$', $_POST['password'])) {
+      echo "The password does not meet the requirements!" . "<br>";
+      return false;
+  } else {
+  return array(
+    "email" => $_POST['email'],
+    "password" => $_POST['password']
+  );
+}
+}
+  $pdo = connect_db("127.0.0.1", "mm", "mm", "3306", "my_shop");
+
+  $data = get_data();
+  //convert entered password to a hash
+  $data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);
+/*function my_password_hash($password)
+  {
+    $hash = password_hash($data['password'], PASSWORD_BCRYPT);
+    return $hash;
+  }*/
+  var_dump($data);
+
+  //check that entered password matches a DB entry for a corresponding email
+  if ($data !== false) {
+    $ma_requete = "SELECT email, password FROM users WHERE email LIKE '" . $data['email'] . "' AND password LIKE '" . $data['password'] . "'";
+    $mon_pdo_statement = $pdo->query($ma_requete);
+    var_dump($mon_pdo_statement);
   }
-  $ma_requete = "SELECT email FROM users WHERE email = $_POST['email'] AND WHERE password = $_POST['password']";
+}
+
+
+      /*if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+      echo "Invalid email format" . "<br>";
+      var_dump($_POST["email"]);
+      return false;*/
+/*elseif ($_POST["password"] !== 
+  }
+  /*$ma_requete = "SELECT email FROM users WHERE email = $_POST['email'] AND WHERE password = $_POST['password']";
   $mon_pdo_statement = $pdo->query($ma_requete);
   $result = $pdo->fetchAll();*/
 ?>
@@ -21,18 +60,18 @@ $pdo = connect_db("127.0.0.1", "mm", "mm", "3306", "my_shop");
 </head>
 
 <body>
-<form class="form-signin">
+<form class="form-signin" method="post" action="signin.php">
     <h1 class="h3 mb-3 col-sm-6 font-weight-normal text-center">Please sign in</h1>
     <div class="form-group row mb-3">
-    <label for="inputEmail" class="col-sm-1 col-form-label">Email</label>
+    <label for="email" class="col-sm-1 col-form-label">Email</label>
       <div class="col-sm-6">
-        <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
+        <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
       </div>
     </div>
   <div class="form-group row mb-3">
-    <label for="inputPassword" class="col-sm-1 col-form-label">Password</label>
+    <label for="password" class="col-sm-1 col-form-label">Password</label>
     <div class="col-sm-6">
-      <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password">
+      <input type="password" class="form-control" name="password" placeholder="Enter your password" required>
     </div>
   </div>
     <div class="col-sm-6">
