@@ -19,6 +19,7 @@
       </ul>
       <a class="btn btn-dark" href="./signup.php" role="button">Create your account</a>
       <a class="btn btn-dark" href="./signin.php" role="button">Sign In</a>
+      <a class="btn btn-dark" href="./logout.php" role="button">Logout</a>
     </div>
   </div>
   <form class="d-flex" role="search">
