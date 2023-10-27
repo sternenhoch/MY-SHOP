@@ -1,4 +1,6 @@
-<?php ?>
+<?php
+include "connect_db.php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,13 +32,28 @@ include("navbar.php");
             </svg>
         </div>
         
-        <div class="content"></div>
-        <div class="containerMenu">
+        <!--<div class="containerMenu">
             <p class="Menu">Catégories</p>
             <svg xmlns="./images/list.svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-            </svg>
-        </div>
+            </svg>        </div>-->
+            <label for="categories">Categories</label>
+            <select name="categories">
+            <!-- c'est par ici qu'on ajoute ce qu'on doit afficher?-->
+            <?php
+      $pdo = connect_db("127.0.0.1", "mm", "mm", "3306", "my_shop");
+      //read the data from categories
+     $ma_requete = "SELECT * FROM categories";
+     $mon_pdo_statement = $pdo->query($ma_requete);
+     $result = $mon_pdo_statement->fetchAll();
+      //var_dump($result);
+      //foreach loop
+      foreach ($result as $category) {
+        echo '<option>'. $category['name']. '</option>';
+      }
+      ?>
+    </select>
+
         <div class="containerMenu">
             <p class="Menu">BPM</p>
             <svg xmlns="./images/list.svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -237,9 +254,8 @@ include("navbar.php");
           </nav>
   
 </footer>
-       
 
       <!--including basic Bootstrap scripts -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+    </body>
 </html>
