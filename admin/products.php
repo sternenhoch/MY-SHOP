@@ -1,13 +1,5 @@
 <?php
-include "../connect_db.php";
-
-$pdo = connect_db("127.0.0.1", "mm", "mm", "3306", "my_shop");
-
-$products = [
-["id" => 1, "name" => "Bonsai tree", "price" => 39.99, "category_id" => 1],
-["id" => 2, "name" => "Daisy", "price" => 8.99, "category_id" => 2],
-["id" => 3, "name" => "Rose", "price" => 8.99, "category_id" => 2],
-];
+include "./connect_db.php";
 ?>
 
 <!DOCTYPE html>
@@ -32,11 +24,17 @@ include("navbar.php");
             </div>
             <div class="input-group ml-5 mb-3">
   <select class="form-select" id="inputGroupSelect04" aria-label="Select a product with two button addons">
-  <!-- connect to db to make sure the number of options matches the number of products in a DB-->
-  
-  <!-- foreach loop -->
-  <?php
-    foreach ($products as $product){
+
+<?php
+  $pdo = connect_db("127.0.0.1", "mm", "mm", "3306", "my_shop");
+//read the data from products
+$ma_requete = "SELECT name FROM products";
+$mon_pdo_statement = $pdo->query($ma_requete);
+//var_dump($mon_pdo_statement);
+$result = $mon_pdo_statement->fetchAll();
+//var_dump("Products names found =>", $result);
+//foreach loop
+    foreach ($result as $product){
     echo $product['name'];
     echo '<option> '. $product['name'] . '</option>'. "<br>";
 }
