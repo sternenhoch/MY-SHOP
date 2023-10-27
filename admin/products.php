@@ -1,5 +1,13 @@
 <?php
-include "connect_db.php";
+include "../connect_db.php";
+
+$pdo = connect_db("127.0.0.1", "mm", "mm", "3306", "my_shop");
+
+$products = [
+["id" => 1, "name" => "Bonsai tree", "price" => 39.99, "category_id" => 1],
+["id" => 2, "name" => "Daisy", "price" => 8.99, "category_id" => 2],
+["id" => 3, "name" => "Rose", "price" => 8.99, "category_id" => 2],
+];
 ?>
 
 <!DOCTYPE html>
@@ -9,10 +17,13 @@ include "connect_db.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="my_shop_style.css">
+    <link rel="stylesheet" href="../my_shop_style.css">
     <title>Products</title>
 </head>
 <body>
+<?php
+include("navbar.php");
+?>
        <div class="container m-5"></div>
        <h1>Welcome to Product Management Page</h1>
         <form action="">
@@ -21,13 +32,16 @@ include "connect_db.php";
             </div>
             <div class="input-group ml-5 mb-3">
   <select class="form-select" id="inputGroupSelect04" aria-label="Select a product with two button addons">
-    <option selected>Select a product</option>
-    <!-- connect to db to make sure the number of options matches the number of products in a DB-->
-    <!-- foreach loop -->
-    <option value="1">Product One name</option>
-    <option value="2">Product Two name</option>
-    <option value="3">Product Three name</option>
-  </select>
+  <!-- connect to db to make sure the number of options matches the number of products in a DB-->
+  
+  <!-- foreach loop -->
+  <?php
+    foreach ($products as $product){
+    echo $product['name'];
+    echo '<option> '. $product['name'] . '</option>'. "<br>";
+}
+?>
+    </select>
   <button class="btn btn-outline-secondary btn-warning" type="button">Edit</button>
    <!-- Button trigger modal -->
   <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
