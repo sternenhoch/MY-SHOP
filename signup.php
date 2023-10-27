@@ -73,6 +73,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
+<?php
+include("navbar.php");
+?>
   <form class="form-signup" action="signup.php" method="post">
     <h1 class="h3 mb-3 col-sm-6 font-weight-normal text-center">Create your account</h1>
     <div class="form-group row mb-3">
