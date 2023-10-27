@@ -33,6 +33,7 @@
       </ul>
       <a class="btn btn-dark" href="./signup.php" role="button">Create your account</a>
       <a class="btn btn-dark" href="./signin.php" role="button">Sign In</a>
+      <a class="btn btn-dark" href="./logout.php" role="button">Logout</a>
     </div>
   </div>
   <form class="d-flex" role="search">
@@ -48,16 +49,15 @@
           <!-- 1er carré avec les filtres -->
             <div class="col-md-5 col-xl-3"><article class="contenu1">
     <figure class="containerFilterBy">
-        <blockquote lang="en">
-        <p class="para">FILTER BY</p1>
-        </blockquote>  
-        <div class="containerMenu">
+                <p class="para">FILTER BY</p1>
+                <div class="containerMenu">
             <p class="Menu">Collection</p>
             <svg xmlns="./images/list.svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
             </svg>
         </div>
         
+        <div class="content"></div>
         <div class="containerMenu">
             <p class="Menu">Catégories</p>
             <svg xmlns="./images/list.svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
