@@ -20,16 +20,13 @@ include "connect_db.php";
                 <button type="button" class="btn btn-success">Add Product</button>
             </div>
             <div class="input-group ml-5 mb-3">
-                <input type="text" class="form-control" placeholder="Product name" aria-label="Product name with two button addons">
-                <button class="btn btn-outline-secondary btn-warning" type="button">Edit</button>
-                <button class="btn btn-outline-secondary btn-danger" type="button">Delete</button>
-            </div>
-            <div class="input-group ml-5 mb-3">
   <select class="form-select" id="inputGroupSelect04" aria-label="Select a product with two button addons">
     <option selected>Select a product</option>
-    <option value="1">Product One</option>
-    <option value="2">Product Two</option>
-    <option value="3">Product Three</option>
+    <!-- connect to db to make sure the number of options matches the number of products in a DB-->
+    <!-- foreach loop -->
+    <option value="1">Product One name</option>
+    <option value="2">Product Two name</option>
+    <option value="3">Product Three name</option>
   </select>
   <button class="btn btn-outline-secondary btn-warning" type="button">Edit</button>
   <button class="btn btn-danger" type="button">Delete</button>
