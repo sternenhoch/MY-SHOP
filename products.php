@@ -1,5 +1,5 @@
 <?php
-include "./connect_db.php";
+include "connect_db.php";
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ include "./connect_db.php";
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../my_shop_style.css">
+  <link rel="stylesheet" href="my_shop_style.css">
   <title>Products</title>
 </head>
 
@@ -22,7 +22,7 @@ include "./connect_db.php";
   <h1>Welcome to Product Management Page</h1>
   <form action="">
     <div class="d-flex flex-row-reverse m-5">
-      <button type="button" class="btn btn-success"><a href="product.php">Add Product</a></button>
+      <button type="button" class="btn btn-success">Add Product</button>
     </div>
       <?php
       $pdo = connect_db("127.0.0.1", "mm", "mm", "3306", "my_shop");
