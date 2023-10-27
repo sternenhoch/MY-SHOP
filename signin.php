@@ -20,46 +20,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $pdo = connect_db("127.0.0.1", "mm", "mm", "3306", "my_shop");
 
   $data = get_data();
-  /*convert entered password to a hash
-  $data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);*/
-/*function my_password_hash($password)
-  {
-    $hash = password_hash($data['password'], PASSWORD_BCRYPT);
-    return $hash;
-  }*/
-  //var_dump($data);
-
   //check that entered password matches a DB entry for a corresponding email
 
   if ($data !== false) {
     $ma_requete = "SELECT password FROM users WHERE email LIKE '" . $data['email'] . "'";
-  //$ma_requete = "SELECT password FROM users WHERE email LIKE '" . $data['email'] . "' AND password LIKE '" . $data['password'] . "'";
     $mon_pdo_statement = $pdo->query($ma_requete);
-    //var_dump("The query is => ",  $mon_pdo_statement);
     $result = $mon_pdo_statement->fetchAll(PDO::FETCH_ASSOC);
-    var_dump("The recorded hash is => ",  $result);
-    var_dump("The password entered by user is => ", $data['password']);
-    echo "Trying to extract =>" . $hash = $result['password'];// try to extract the needed part
-    if (password_verify($data['password'], $result)){
+    if (password_verify($data['password'], $result[0]['password'])){
       //now need to redirect to index.php if admin =0 and to admin.php if admin = 1
-      echo "Hoooray, password is valid!";
-      header("Location: index.php");//check the syntax: this or ./index.php?
+      $admin_requete = "SELECT admin FROM users WHERE email LIKE '" . $data['email'] . "'";
+      $mon_pdo_statement = $pdo->query($admin_requete);
+      $admin_result = $mon_pdo_statement->fetchAll(PDO::FETCH_ASSOC);
+      //var_dump("Admin for the user is set to =>", $admin_result);
+      //var_dump("Admin password is set to =>", $admin_result[0]['admin']);
+      if ($admin_result[0]['admin'] == "1") {
+        echo "You're an admin";
+        header("Location: ./admin.php");
+      } else {
+        header("Location: ./index.php");
+      }
     } else {
       echo "Please, check your password";
     }
   }
 }
-
-      //check if admin or not
-      $admin_requete = "SELECT admin FROM users WHERE email LIKE '" . $data['email'] . "'";
-      $mon_pdo_statement = $pdo->query($admin_requete);
-      $admin_result = $mon_pdo_statement->fetchAll(PDO::FETCH_ASSOC);
-      var_dump($admin_result);
-      if ($admin_result = 0) {
-        header("Location: index.php");//check the syntax: this or ./index.php?
-      } else {
-        header("Location: admin.php");//check the syntax: this or ./admin.php?
-      }
 ?>
 
 <!DOCTYPE html>
