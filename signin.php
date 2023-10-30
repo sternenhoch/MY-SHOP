@@ -1,6 +1,8 @@
 <?php
 include "connect_db.php";
 
+session_start();
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
  function get_data(){
@@ -27,6 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mon_pdo_statement = $pdo->query($ma_requete);
     $result = $mon_pdo_statement->fetchAll(PDO::FETCH_ASSOC);
     if (password_verify($data['password'], $result[0]['password'])){
+      //setting the user_id in the session for session managment
+      $_SESSION['user_id'] = $result[0]['id'];
       //now need to redirect to index.php if admin =0 and to admin.php if admin = 1
       $admin_requete = "SELECT admin FROM users WHERE email LIKE '" . $data['email'] . "'";
       $mon_pdo_statement = $pdo->query($admin_requete);
