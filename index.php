@@ -14,15 +14,19 @@ include "connect_db.php";
 </head>
 
 <body>
+  <?php
+  session_start();
+  ?>
 <?php
 include("navbar.php");
 ?>
 <!-- main flexbox-->
+<div class="firstRow">
   <div class="container-fluid">
     <!--row1-->
     <div class="row justify-content-between">
           <!-- 1er carré avec les filtres -->
-            <div class="col-md-5 col-xl-3"><article class="contenu1">
+            <div class="col-sm-12 col-md-5 col-lg-3 col-xl-3"><article class="contenu1">
     <figure class="containerFilterBy">
                 <p class="para">FILTER BY</p1>
                 <div class="containerMenu">
@@ -72,7 +76,7 @@ include("navbar.php");
   </div>
             <!-- les carrés avec les images -->
             <!--carré 1 -->
-            <div class="col-md-5 col-xl-3">
+            <div class="col-sm-12 col-md-5 col-lg-3 col-xl-3">
               <img class="product-image img-fluid" src="./images/basilic_pot.jpg" alt="Potted basil plant">
               <div class="product-info">  
                     <h4 class="product-name">Basilic plant</h4>
@@ -89,7 +93,7 @@ include("navbar.php");
                 </div>
               </div>
                 <!--carré 2 -->
-            <div class="col-md-5 col-xl-3">
+            <div class="col-sm-12 col-md-5 col-lg-3 col-xl-3">
             <img class="product-image img-fluid" src="./images/blooming_cactus.jpg" alt="Potted cactus plant">
               <div class="product-info">  
                     <h4 class="product-name">Blooming cactus</h4>
@@ -106,7 +110,7 @@ include("navbar.php");
                 </div>
             </div>
             <!--carré 3 -->
-            <div class="col-md-5 col-xl-3">
+            <div class="col-sm-12 col-md-5 col-lg-3 col-xl-3">
             <img class="product-image img-fluid" src="./images/bonsai_tree.jpg" alt="Potted Bonsaï plant">
               <div class="product-info">  
                     <h4 class="product-name">Bonsai tree</h4>
@@ -126,11 +130,12 @@ include("navbar.php");
               
 
             </div>
-        
+</div>
 <!-- row2 -->
+<div class="secondRow">
 <div class="row justify-content-between">
               <!--carré 1 -->
-<div class="col-md-5 col-xl-3">
+<div class="col-sm-12 col-md-5 col-lg-3 col-xl-3">
               <img class="product-image img-fluid" src="./images/daisy_pot.jpg" alt="Potted Daisy plant">
               <div class="product-info">  
                     <h4 class="product-name">Daisy</h4>
@@ -147,7 +152,7 @@ include("navbar.php");
                 </div>
               </div>
             <!--carré 2 -->
-            <div class="col-md-5 col-xl-3">
+            <div class="col-sm-12 col-md-5 col-lg-3 col-xl-3">
               <img class="product-image img-fluid" src="./images/lemon_tree.jpg" alt="Potted lemon tree plant">
               <div class="product-info">  
                     <h4 class="product-name">Lemon tree</h4>
@@ -164,7 +169,7 @@ include("navbar.php");
                 </div>
               </div>
                 <!--carré 3 -->
-            <div class="col-md-5 col-xl-3">
+            <div class="col-sm-12 col-md-5 col-lg-3 col-xl-3">
             <img class="product-image img-fluid" src="./images/plant1_pot.jpg" alt="Potted Haworthia plant">
               <div class="product-info">  
                     <h4 class="product-name">Plant1</h4>
@@ -181,7 +186,7 @@ include("navbar.php");
                 </div>
             </div>
             <!--carré 4 -->
-            <div class="col-md-5 col-xl-3">
+            <div class="col-sm-12 col-md-5 col-lg-3 col-xl-3">
             <img class="product-image img-fluid" src="./images/plant2_pot.jpg" alt="Purple tute syngonium pixie, interior plant">
               <div class="product-info">  
                     <h4 class="product-name">Plant2</h4>
@@ -198,12 +203,13 @@ include("navbar.php");
                 </div>
               </div>
         </div>
-
+</div>
         
         <!-- row3 -->
+<div class="thirdRow">       
 <div class="row justify-content-between">
               <!--carré 1 -->
-<div class="col-md-5 col-xl-3">
+<div class="col-sm-12 col-md-5 col-lg-3 col-xl-3">
               <img class="product-image img-fluid" src="./images/rose.jpg" alt="Potted red rose plant">
               <div class="product-info">  
                     <h4 class="product-name">Rose</h4>
@@ -220,7 +226,7 @@ include("navbar.php");
                 </div>
               </div>
             <!--carré 2 -->
-            <div class="col-md-5 col-xl-3">
+            <div class="col-sm-12 col-md-5 col-lg-3 col-xl-3">
               <img class="product-image img-fluid" src="./images/tomato_veggie.jpg" alt="Potted tomato plant">
               <div class="product-info">  
                     <h4 class="product-name">Tomato</h4>
@@ -240,7 +246,9 @@ include("navbar.php");
 
 
         </div>
+</div>
   </div>
+  
 <footer>
    <!--pagination-->
         <nav aria-label="Page navigation example">
