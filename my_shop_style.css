@@ -4,6 +4,12 @@
 
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 .containerRange{
     margin-top: 10px;
 }
@@ -19,7 +25,14 @@
     margin-top: 10px;
 
 }
-
+.firstRow{
+    margin-top: 1%;
+}
+.secondRow{
+    display: grid;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
 .product-image {
     max-height: 33%;
     width: 100%;
