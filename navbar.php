@@ -36,7 +36,7 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-secondary" type="submit">Search</button>
       </form> -->
-      <form class="d-flex" action="search.php" method="GET">
+      <form class="d-flex" action="search.php" method="GET" target="_blank">
         <input type ="text" name="query" placeholder="Search">
         <input type="submit" value="Search">
       </form>
